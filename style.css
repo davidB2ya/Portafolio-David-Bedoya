@@ -202,7 +202,7 @@ section #text span{
 }
 
 .sec{
-    height:170vh;
+    height:150vh;
     position: relative;
     padding:100px;
     background:#094b65;
@@ -217,7 +217,7 @@ section #text span{
     text-align: center;
     line-height: 0.55em;
     background-image: linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
-    display: inline-block;
+    display: block;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 1px;
@@ -227,7 +227,7 @@ section #text span{
     font-size:3em;
     font-family: 'Rancho' , cursive;
     line-height: 0.55em;
-    padding: 0.5em;
+    padding: .5em 3em .5em 3em;
     margin-top: 1em;
     background-image: linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
     display: inline-block;
@@ -236,22 +236,24 @@ section #text span{
     letter-spacing: 2px;
 }
 
-.profile{
+.container-skills{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .sec p{
     font-size: 1em;
     color: #fff;
-    width: 50em;
+    /* width: 50em; */
     text-align: start;
+    align-items: center;
 }
 
 .skills{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    width: 100vh;
+    width: 65vh;
     transition: transform 0.5s ease;
 }
 
@@ -270,7 +272,7 @@ section #text span{
 
 .skills i{
     font-size:2.4em;
-    margin-left: 1.5em;
+    padding: .1em .5em .1em .5em;
     margin-top: 1.5em;
     transition: all .5s;
     color:#fff;
@@ -323,14 +325,15 @@ section #text span{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    width: 140vh;
+    width: 60vh;
     color: #fff;
     transition: transform 0.5s ease;
 }
 
 .tools i{
     font-size:2.4em;
-    margin-left: 1.5em;
+    padding: .1em .5em .1em .5em;
+    /* border: 1px solid red; */
     margin-top: 1em;
     transition: all .5s;
 }
@@ -384,7 +387,7 @@ section #text span{
 }
 
 .sec-projects{
-    height:100vh;
+    height:220vh;
     position: relative;
     padding:100px;
     background:#053244;
@@ -392,14 +395,22 @@ section #text span{
 }
 
 .sec-projects h2{
-    font-size:2.5em;
-    color: #fff;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    font-family: 'Rancho' , cursive;
+    font-size: 6vw;
+    text-align: center;
+    line-height: 0.55em;
+    background-image: linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
+    display: block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
 }
 
 .sec-projects  p{
     font-size: 1em;
-    color: #fff;
+    color: black;
 }
 
 .sec-projects::before{
@@ -413,6 +424,87 @@ section #text span{
     z-index: 10;
 }
 
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 3em;
+}
+
+.project{
+    border: 1px solid #EB4D43;
+    background : #fff;
+    border-radius: 10px 10px 5px 5px;
+    height:40vh;
+}
+
+.project img:hover{
+    opacity: 0.3;
+}
+
+.project :hover .info p{
+    opacity: 1;
+}
+
+.project :hover .fa-github-alt{
+    opacity: 1;
+}
+
+.project :hover .fa-globe-americas{
+    opacity: 1;
+}
+
+.project .name{
+    padding: 0.5em;
+    font-family: 'Rancho' , cursive;
+    font-size: 2vw;
+    text-align: center;
+    line-height: 0.55em;
+    background-image: linear-gradient(0deg, #072e3fbb 40%, #41B9C2 60%);
+    display: block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.project .info p{
+    width: 25vw;
+    text-align: start;
+    margin-top: -10em;
+    opacity: 0;
+    font-size: 1em;
+    letter-spacing: .1em;
+    font-weight: 600;
+}
+
+.img-container img{
+    width: 25vw;
+    height: 30vh;
+}
+
+.fa-github-alt{
+    position: absolute;
+    margin-top: 3.5em;
+    margin-left: -2em;
+    font-size: 2em;
+    color: black;
+    cursor: pointer;
+    padding: 0em 0.5em 0em 0.5em;
+    opacity: 0;
+    
+}
+
+.fa-globe-americas{
+    position: absolute;
+    margin-top: 3.5em;
+    margin-right: -2em;
+    font-size: 2em;
+    color: black;
+    cursor: pointer;
+    padding: 0em 0.5em 0em 0.5em;
+    opacity: 0;
+}
+
 .sec-contacts{
     height:100vh;
     position: relative;
@@ -422,9 +514,17 @@ section #text span{
 }
 
 .sec-contacts h2{
-    font-size:2.5em;
-    color: #fff;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    font-family: 'Rancho' , cursive;
+    font-size: 6vw;
+    text-align: center;
+    line-height: 0.55em;
+    background-image: linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
+    display: block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
 }
 
 .sec-contacts  p{
@@ -484,6 +584,7 @@ footer{
     font-size:2em;
     color:#1E60C6;
     margin-left: 1em;
+    cursor : pointer;
 }
 
 footer span{
@@ -492,4 +593,5 @@ footer span{
 
 .freepik{
     width:2em;
+    cursor : pointer;
 }

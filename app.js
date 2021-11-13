@@ -6,11 +6,15 @@ let rocks = document.getElementById('rocks');
 let forest = document.getElementById('forest');
 let water = document.getElementById('water');
 let header = document.getElementById('header');
+
 const skills = document.querySelector('.skills');
 const tools = document.querySelector('.tools');
 const pixels = () => document.documentElement.scrollTop || document.body.scrollTop;
 const project_container = document.getElementById('project-container')
-import data from './data.json'
+
+// Static Import
+import data from "./data.js" 
+console.log(data);
 
 // const textEl = document.getElementById('auto-text')
 // const text = 'Soy un jóven cubano, residente en Colombia y Técnico en Sistemas, que busca retos nuevos en la rama de las Tecnologías (tanto como Full-Stack Web Developer como en la Electrónica). Participé activamente durante cuatro años en equipos de investación y desarrollo, con enfoque en diseño y fabricación de equipos de telecomunicaciones y automatización. Como desarrollador formé parte de la segunda cohorte del Bootcamp de la Fundación Educamas.'
@@ -59,14 +63,16 @@ function checkSkills() {
 
     if (pixels () > 600){
         skills.style.transform = "translateX(" + 0 + "%)";
+        tools.style.transform = "translateX(" + 0 + "%)";
     }else if (pixels () < 600) {
         skills.style.transform = "translateX(" + -500 + "%)";
-    }
-    if (pixels () > 800){
-        tools.style.transform = "translateX(" + 0 + "%)";
-    }else if (pixels () < 800) {
         tools.style.transform = "translateX(" + -500 + "%)";
     }
+    // if (pixels () > 800){
+    //     tools.style.transform = "translateX(" + 0 + "%)";
+    // }else if (pixels () < 800) {
+    //     tools.style.transform = "translateX(" + -500 + "%)";
+    // }
 
     //     let idx = 1
     //     let speed = 300 
@@ -86,6 +92,7 @@ function checkSkills() {
 
 }
 
+
 function addProject(){
     for(let i = 0; i < data.length; i++) {
         // let id_project = data[i];
@@ -96,15 +103,15 @@ function addProject(){
         
             const projectInnerHTML = `
             <div class="img-container">
-                <img src="${data[i].img}" alt="${data[i].name}">
-            </div>
-            <div class="info">
                 <h3 class="name">${data[i].name}</h3>
-                <a class="github-project" href="${data[i].github}"><i class="fab fa-github"></i></a> 
-                <a class="deploy-project" href="${data[i].deploy}"><i class="fab fa-github"></i></a> 
-                <p>${data[i].description}</p>
-        
+                <img src='${data[i].img}' alt="${data[i].name}">
+                <div class="info">
+                    <a class="github-project" href="${data[i].github}"><i class="fab fa-github-alt"></i></a> 
+                    <a class="deploy-project" href="${data[i].deploy}"><i class="fas fa-globe-americas"></i></a> 
+                    <p>${data[i].description}</p>
+                </div>
             </div>
+            
             `
             projectEl.innerHTML = projectInnerHTML
         
@@ -113,26 +120,5 @@ function addProject(){
         }
     }
 }
-// function createProject(id) {
-//     const projectEl = document.createElement('div')
-//     projectEl.classList.add('project')
-
-//     const projectInnerHTML = `
-//     <div class="img-container">
-//         <img src="${id.img}" alt="${id.name}">
-//     </div>
-//     <div class="info">
-//         <h3 class="name">${id.name}</h3>
-//         <a class="github-project" href="${id.github}"><i class="fab fa-github"></i></a> 
-//         <a class="deploy-project" href="${id.deploy}"><i class="fab fa-github"></i></a> 
-//         <p>${id.description}</p>
-
-//     </div>
-//     `
-//     projectEl.innerHTML = projectInnerHTML
-
-//     project_container.appendChild(projectEl)
-
-// }   
     
 addProject()
