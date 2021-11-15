@@ -204,8 +204,9 @@ section #text span {
 
 }
 
+/* Section the About me */
 .sec {
-    height    : 160vh;
+    height    : 100%;
     position  : relative;
     padding   : 100px;
     background: #094b65;
@@ -213,7 +214,6 @@ section #text span {
 }
 
 .sec h2 {
-    margin-bottom          : 0.5em;
     padding                : 0.5em;
     font-family            : 'Rancho', cursive;
     font-size              : 6vw;
@@ -362,7 +362,7 @@ section #text span {
     color: #D74A34;
 }
 
-.fa-github:hover  { 
+.fa-github:hover {
     color: #F7A000;
 }
 
@@ -392,12 +392,10 @@ section #text span {
 
 .sec img {
     width        : 12em;
-    height       : 12em;
+    height       : 12.5em;
     margin-bottom: 1em;
     border-radius: 10em;
 }
-
-.sec img:hover {}
 
 .sec::before {
     content   : '';
@@ -410,10 +408,12 @@ section #text span {
     z-index   : 10;
 }
 
+/* Section  the Projects*/
 .sec-projects {
-    height    : 220vh;
+    height    : 100%;
     position  : relative;
-    padding   : 100px;
+    padding   : 1em;
+    padding-bottom: 5em;
     background: #053244;
     text-align: center;
 }
@@ -432,11 +432,6 @@ section #text span {
     letter-spacing         : 1px;
 }
 
-.sec-projects p {
-    font-size: 1em;
-    color    : black;
-}
-
 .sec-projects::before {
     content   : '';
     position  : absolute;
@@ -449,33 +444,26 @@ section #text span {
 }
 
 .project-container {
-    display  : flex;
-    flex-wrap: wrap;
-    margin   : auto;
-    gap      : 3em;
+    display        : flex;
+    flex-wrap      : wrap;
+    margin         : auto;
+    width          : 95%;
+    justify-content: space-around;
+    gap            : 2EM;
 }
 
 .project {
-    border       : 1px solid #EB4D43;
-    background   : #fff;
+    border       : 2px solid rgba(34, 179, 184, 1);
+    box-shadow   : 5px 15px 20px rgba(34, 179, 184, 0.4);
+    background   : transparent;
     border-radius: 10px 10px 5px 5px;
-    height       : 40vh;
+    height       : 12.7em;
+    position     : relative;
+    transition:all .5s ease;
 }
 
-.project img:hover {
-    opacity: 0.3;
-}
-
-.project :hover .info p {
-    opacity: 1;
-}
-
-.project :hover .fa-github-alt {
-    opacity: 1;
-}
-
-.project :hover .fa-globe-americas {
-    opacity: 1;
+.project:hover{
+    transform:scale(1.1);
 }
 
 .project .name {
@@ -484,50 +472,87 @@ section #text span {
     font-size              : 2vw;
     text-align             : center;
     line-height            : 0.55em;
-    background-image       : linear-gradient(0deg, #072e3fbb 40%, #41B9C2 60%);
+    /* background-image       : linear-gradient(0deg, #072e3fbb 40%, #41B9C2 60%); */
+    background-image       : linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
     display                : block;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing         : 1px;
 }
 
-.project .info p {
-    width         : 25vw;
-    text-align    : start;
-    margin-top    : -10em;
-    opacity       : 0;
-    font-size     : 1em;
-    letter-spacing: .1em;
-    font-weight   : 600;
+.img-container img {
+    position: relative;
+    width     : 25vw;
+    height    : 26vh;
+    border-radius : 0 0 3px 3px; 
+    object-fit: cover;
+
 }
 
-.img-container img {
-    width : 25vw;
-    height: 30vh;
+.overlay {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    position  : absolute;
+    bottom    : 0;
+    left      : 0;
+    background: rgba(0, 118, 192, 0.781);
+    width     : 100%;
+    height    : 0;
+    overflow  : hidden;
+    transition: .5s ease;
+}
+
+.project .overlay p {
+    color      : #fff;
+    width         : 25vw;
+    font-weight: 300;
+    font-size  : 1em;
+    letter-spacing: .1em;
+    position   : absolute;
+    top        : 30%;
+    left       : 50%;
+    text-align : start;
+    transform  : translate(-50%, -50%);
+}
+
+.project :hover .overlay{
+    height:81%;
+    cursor: pointer;
+}
+
+.overlay .info{
+    display: flex;
+    justify-content: space-around;
 }
 
 .fa-github-alt {
     position   : absolute;
-    margin-top : 3.5em;
-    margin-left: -2em;
+    margin-top : .8em;
     font-size  : 2em;
-    color      : black;
+    color      : #fff;
     cursor     : pointer;
-    padding    : 0em 0.5em 0em 0.5em;
     opacity    : 0;
+}
 
+.project :hover .fa-github-alt{
+    opacity : 1;
 }
 
 .fa-globe-americas {
     position    : absolute;
-    margin-top  : 3.5em;
-    margin-right: -2em;
+    margin-top  : .8em;
     font-size   : 2em;
-    color       : black;
+    color       : #fff;
     cursor      : pointer;
-    padding     : 0em 0.5em 0em 0.5em;
     opacity     : 0;
 }
+
+.project :hover .fa-globe-americas{
+    opacity : 1;
+}
+
+/* Section  the Contacts */
 
 .sec-contacts {
     height    : 120vh;
@@ -557,78 +582,80 @@ section #text span {
 }
 
 .sec-contacts form {
-    display : flex;
+    display       : flex;
     flex-direction: column;
 }
 
-.sec-contacts form input{
-    border-radius: .8em;
-    border: 2px solid #41B9C2;
-    background: transparent;
-    margin-bottom: 1.5em;
-    width: 25em;
-    height: 2.8em;
-    padding-left: .4em;
-    color: #fff;
-    font-weight: 600;
-    line-height: 24px;
+.sec-contacts form input {
+    border-radius : .8em;
+    border        : 2px solid #41B9C2;
+    background    : transparent;
+    margin-bottom : 1.5em;
+    width         : 25em;
+    height        : 2.8em;
+    padding-left  : .4em;
+    color         : #fff;
+    font-weight   : 600;
+    line-height   : 24px;
     letter-spacing: 1.71429px;
+    box-shadow    : 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.sec-contacts form input::placeholder{
+.sec-contacts form input::placeholder {
     color: #fff;
 }
 
-.sec-contacts form input:focus{
-    outline: none;
-    background-color:#042330;
+.sec-contacts form input:focus {
+    outline         : none;
+    background-color: #042330;
 }
 
-.sec-contacts form textarea{
-    border-radius: .8em;
-    border: 2px solid #41B9C2;
-    background: transparent;
-    margin-bottom: 1.5em;
-    width: 25em;
-    height: 8em;
-    padding-left: .4em;
-    color: #fff;
-    font-weight: 600;
-    line-height: 24px;
+.sec-contacts form textarea {
+    border-radius : .8em;
+    border        : 2px solid #41B9C2;
+    background    : transparent;
+    margin-bottom : 1.5em;
+    width         : 25em;
+    height        : 8em;
+    padding-left  : .4em;
+    color         : #fff;
+    font-weight   : 600;
+    line-height   : 24px;
     letter-spacing: 1.71429px;
+    box-shadow    : 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.sec-contacts form textarea:focus{
-    outline: none;
-}
-
-.sec-contacts form textarea::placeholder{
-    color: #fff;
-}
-
-.sec-contacts form button{
-    border-radius: .8em;
-    border: 2px solid #41B9C2;
-    background: transparent;
-    margin-bottom: 1.5em;
-    width: 25em;
-    height: 2.5em;
-    padding-left: .4em;
-    color: #fff;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 1.71429px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
+.sec-contacts form textarea:focus {
     outline: none;
 }
 
-.sec-contacts form button:hover{
+.sec-contacts form textarea::placeholder {
+    color: #fff;
+}
+
+.sec-contacts form button {
+    border-radius : .8em;
+    border        : 2px solid #41B9C2;
+    background    : transparent;
+    margin-bottom : 1.5em;
+    width         : 25em;
+    height        : 2.5em;
+    padding-left  : .4em;
+    color         : #fff;
+    font-weight   : 600;
+    line-height   : 24px;
+    letter-spacing: 1.71429px;
+    box-shadow    : 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition    : all 0.3s ease 0s;
+    cursor        : pointer;
+    outline       : none;
+}
+
+.sec-contacts form button:hover {
     background-color: #41B9C2;
-    box-shadow: 0px 15px 20px rgba(34, 179, 184, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
+    box-shadow      : 0px 15px 20px rgba(34, 179, 184, 0.4);
+    color           : #fff;
+    transform       : translateY(-7px);
 }
 
 .sec-contacts::before {
@@ -666,6 +693,8 @@ section #text span {
     cursor     : pointer;
 }
 
+/* Button Float */
+
 #btn_top .fas {
     position     : fixed;
     z-index      : 1000;
@@ -693,6 +722,8 @@ section #text span {
     opacity   : 1;
     visibility: visible;
 }
+
+/* Section the footer */
 
 footer {
     display       : block;

@@ -55,10 +55,10 @@ addEventListener("DOMContentLoaded", () => {
 window.addEventListener("scroll", checkSkills);
 
 function checkSkills() {
-  if (pixels() > 600) {
+  if (pixels() > 700) {
     skills.style.transform = "translateX(" + 0 + "%)";
     tools.style.transform = "translateX(" + 0 + "%)";
-  } else if (pixels() < 600) {
+  } else if (pixels() < 700) {
     skills.style.transform = "translateX(" + -500 + "%)";
     tools.style.transform = "translateX(" + -500 + "%)";
   }
@@ -75,11 +75,14 @@ function addProject() {
             <div class="img-container">
                 <h3 class="name">${data[i].name}</h3>
                 <img src='${data[i].img}' alt="${data[i].name}">
-                <div class="info">
-                    <a target='_blank' class="github-project" href="${data[i].github}"><i class="fab fa-github-alt"></i></a> 
-                    <a target='_blank' class="deploy-project" href="${data[i].deploy}"><i class="fas fa-globe-americas"></i></a> 
+                <div class="overlay">
                     <p>${data[i].description}</p>
+                    <div class="info">
+                        <a target='_blank' class="github-project" href="${data[i].github}"><i class="fab fa-github-alt"></i></a> 
+                        <a target='_blank' class="deploy-project" href="${data[i].deploy}"><i class="fas fa-globe-americas"></i></a> 
+                    </div>    
                 </div>
+               
             </div>
             `;
       projectEl.innerHTML = projectInnerHTML;
