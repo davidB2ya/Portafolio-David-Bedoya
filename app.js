@@ -14,10 +14,6 @@ const project_container = document.getElementById('project-container')
 
 // Static Import
 import data from "./data.js" 
-console.log(data);
-
-// const textEl = document.getElementById('auto-text')
-// const text = 'Soy un jóven cubano, residente en Colombia y Técnico en Sistemas, que busca retos nuevos en la rama de las Tecnologías (tanto como Full-Stack Web Developer como en la Electrónica). Participé activamente durante cuatro años en equipos de investación y desarrollo, con enfoque en diseño y fabricación de equipos de telecomunicaciones y automatización. Como desarrollador formé parte de la segunda cohorte del Bootcamp de la Fundación Educamas.'
 
 window.addEventListener('scroll', function() {
     let value = window.scrollY;
@@ -68,34 +64,12 @@ function checkSkills() {
         skills.style.transform = "translateX(" + -500 + "%)";
         tools.style.transform = "translateX(" + -500 + "%)";
     }
-    // if (pixels () > 800){
-    //     tools.style.transform = "translateX(" + 0 + "%)";
-    // }else if (pixels () < 800) {
-    //     tools.style.transform = "translateX(" + -500 + "%)";
-    // }
-
-    //     let idx = 1
-    //     let speed = 300 
-
-    //     if (pixels () > 400){
-    //         textEl.innerText = text.slice(0, idx)
-
-    //         idx++
-        
-    //         if (idx > text.length) {
-    //             idx = 1
-    //         }
-        
-    //         setTimeout(writeText, speed)
-    //     }
-
-
+    
 }
 
 
 function addProject(){
     for(let i = 0; i < data.length; i++) {
-        // let id_project = data[i];
         createProject()
         function createProject() {
             const projectEl = document.createElement('div')
@@ -106,12 +80,11 @@ function addProject(){
                 <h3 class="name">${data[i].name}</h3>
                 <img src='${data[i].img}' alt="${data[i].name}">
                 <div class="info">
-                    <a class="github-project" href="${data[i].github}"><i class="fab fa-github-alt"></i></a> 
-                    <a class="deploy-project" href="${data[i].deploy}"><i class="fas fa-globe-americas"></i></a> 
+                    <a target='_blank' class="github-project" href="${data[i].github}"><i class="fab fa-github-alt"></i></a> 
+                    <a target='_blank' class="deploy-project" href="${data[i].deploy}"><i class="fas fa-globe-americas"></i></a> 
                     <p>${data[i].description}</p>
                 </div>
             </div>
-            
             `
             projectEl.innerHTML = projectInnerHTML
         

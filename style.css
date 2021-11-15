@@ -202,7 +202,7 @@ section #text span{
 }
 
 .sec{
-    height:150vh;
+    height:160vh;
     position: relative;
     padding:100px;
     background:#094b65;
@@ -368,11 +368,14 @@ section #text span{
 }
 
 .sec img{
-    width:15em;
-    height: 24em;
-    /* margin-top: -39em; */
-    z-index: 1;
-    /* background:#fff */
+    width:12em;
+    height: 12em;
+    margin-bottom: 1em;
+    border-radius:10em;
+}
+
+.sec img:hover{
+    
 }
 
 .sec::before{
@@ -506,7 +509,7 @@ section #text span{
 }
 
 .sec-contacts{
-    height:100vh;
+    height:120vh;
     position: relative;
     padding:100px;
     background:#042330;
@@ -541,6 +544,31 @@ section #text span{
     height: 100px;
     background: linear-gradient(to top, #031922,transparent);
     z-index: 10;
+}
+
+.content-contact{
+    display: flex;
+    gap:4em;
+}
+
+.contact{
+    display: flexbox;
+    text-align: start;
+    font-size: 2em;
+    /* color:#fff; */
+    text-decoration: none;
+    font-family: 'Rancho' , cursive;
+    padding-top: 1em;
+}
+
+.contact i{
+    margin-bottom: 2.5em;
+}
+
+.contact a{
+    color:#fff;
+    font-family: 'Rancho' , cursive;
+    cursor: pointer;
 }
 
 #btn_top .fas{
