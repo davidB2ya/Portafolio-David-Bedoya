@@ -14,11 +14,11 @@ html {
 }
 
 .img-logo {
-    width              : 1.5em;
-    height             : 1.5em;
-    margin-left        : -2em;
-    cursor             : pointer;
-    transition         : all 500ms;
+    width      : 1.5em;
+    height     : 1.5em;
+    margin-left: -2em;
+    cursor     : pointer;
+    transition : all 500ms;
 }
 
 .logo .img-logo:hover {
@@ -26,11 +26,11 @@ html {
 }
 
 .redes {
-    position           : absolute;
-    display            : flex;
-    transition         : all 600ms;
-    padding            : 0px 5px 0px 5px;
-    cursor             : pointer;
+    position  : absolute;
+    display   : flex;
+    transition: all 600ms;
+    padding   : 0px 5px 0px 5px;
+    cursor    : pointer;
 }
 
 #linkedin {
@@ -116,6 +116,11 @@ body {
     color     : #fff;
 }
 
+.open,
+.close {
+    display: none;
+}
+
 section {
     position       : relative;
     width          : 100%;
@@ -181,6 +186,7 @@ section #text span {
     transform      : translateY(100px);
     animation      : animation 2s linear infinite;
     cursor         : pointer;
+    z-index: 1;
 }
 
 @keyframes animation {
@@ -393,7 +399,7 @@ section #text span {
     margin-bottom: 1em;
     border-radius: 10em;
 }
- 
+
 .ov-btn-grow-ellipse {
     background     : #fff;
     color          : #045081;
@@ -407,6 +413,7 @@ section #text span {
     text-decoration: none;
     box-shadow     : 0px 10px 20px rgba(34, 179, 184, 0.5);
     margin         : 2em 0 0 2em;
+    cursor         : pointer;
 }
 
 .ov-btn-grow-ellipse:hover {
@@ -498,6 +505,7 @@ section #text span {
     height       : 12.7em;
     position     : relative;
     transition   : all .5s ease;
+    overflow: hidden;
 }
 
 .project:hover {
@@ -505,16 +513,16 @@ section #text span {
 }
 
 .project .name {
-    padding                   : 0.5em;
-    font-family               : 'Rancho', cursive;
-    font-size                 : 2vw;
-    text-align                : center;
-    line-height               : 0.55em;
-    background-image          : linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
-    display                   : block;
-    -webkit-background-clip   : text;
-    -webkit-text-fill-color   : transparent;
-    letter-spacing            : 1px;
+    padding                : 0.5em;
+    font-family            : 'Rancho', cursive;
+    font-size              : 2vw;
+    text-align             : center;
+    line-height            : 0.55em;
+    background-image       : linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
+    display                : block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing         : 1px;
 }
 
 .img-container img {
@@ -590,7 +598,7 @@ section #text span {
 /* Section  the Contacts */
 
 .sec-contacts {
-    height    : 120vh;
+    height    : 100%;
     position  : relative;
     padding   : 100px;
     background: #042330;
@@ -706,7 +714,7 @@ section #text span {
 
 .content-contact {
     display: flex;
-    gap    : 4em;
+    gap    : 5em;
 }
 
 .contact {
@@ -716,6 +724,7 @@ section #text span {
     text-decoration: none;
     font-family    : 'Rancho', cursive;
     padding-top    : 1em;
+    width:16em;
 }
 
 .contact i {
@@ -783,4 +792,140 @@ footer span {
 .freepik {
     width : 2em;
     cursor: pointer;
+}
+
+/*----------------------------- Media Query --------------------------*/
+
+/* Small (sm) */ 
+@media (max-width: 640px) { 
+   
+} 
+ 
+/* Medium (md) */ 
+@media (max-width: 768px) { 
+    .open i{
+        margin-left: 12rem;
+    }
+    .img-logo {
+        width      : 1em;
+        height     : 1em;
+    }
+    .redes{
+        width : 1.2em;
+        height : 1.2em;
+    }
+    .logo:hover #linkedin {
+        transform: translate(-55px, -68px) scale(1);
+    }
+    
+    .logo:hover #github {
+        transform: translate(-10px, -68px) scale(1);
+    }
+    
+    .logo:hover #gmail {
+        transform: translate(35px, -68px) scale(1);
+    }
+    
+    .logo:hover #whatsapp {
+        transform: translate(80px, -68px) scale(1);
+    }
+    .sec {
+        padding   : 1.5em;
+    }
+    .sec img {
+        width        : 8em;
+        height       : 10em;
+    } 
+    .skills {
+        width     : 40vh;
+    }
+}
+
+ 
+/* Large (lg) */ 
+@media (max-width: 1024px) { 
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: #678294;
+        gap: 3em;
+        height:100%;
+        overflow-y: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    
+    .open{
+        display:contents;
+        color:#0B447F;
+        align-self: flex-end;
+        background: none;
+        font-size: 2em;
+        border: none;
+    }
+    .open i{
+        cursor: pointer;
+        display:flex;
+        /* margin-left: 22rem; */
+    }
+
+    .close {
+        display:flex;
+        align-self: flex-end;
+        color: #fff;
+        z-index: 2;
+        right: .5em;
+        top: .5em;
+        position: fixed; 
+        background: none;
+        font-size: 2em;
+        border: none;
+    }
+    .close i{
+        cursor: pointer; 
+    }
+
+    .opened{
+        opacity: 1;
+        pointer-events:all;
+    }
+
+    .project-container {
+        width          : 85%;
+    }
+
+    .img-container img {
+        width        : 19vw;
+        height       : 8em;
+    }
+    .project {
+        height       : 10em;
+    }
+    .project .overlay p {
+        width     : 19vw;
+        font-size : .6em;
+    }
+    .fa-github-alt {
+        font-size : 1em;
+    }
+    .fa-globe-americas {
+        font-size : 1em;
+    }
+} 
+ 
+/* Extra Large (xl) */ 
+@media (max-width: 1200px) { 
+    .container-skills{
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-contact{
+        flex-direction: column;
+        align-items: center;
+    }
 }

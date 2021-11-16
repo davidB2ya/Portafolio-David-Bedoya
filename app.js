@@ -7,6 +7,15 @@ let forest = document.getElementById('forest')
 let water = document.getElementById('water')
 let header = document.getElementById('header')
 
+const menu = document.querySelector(".menu")
+const open = document.querySelector(".open")
+const close = document.querySelector(".close")
+const home = document.getElementById("btns_home")
+const about = document.getElementById("btns_about")
+const project = document.getElementById("btns_project")
+const contact = document.getElementById("btns_contact")
+
+
 const skills = document.querySelector('.skills')
 const tools = document.querySelector('.tools')
 const pixels = () =>
@@ -94,3 +103,18 @@ function addProject () {
 }
 
 addProject()
+
+function toggleMenu(){
+    menu.classList.toggle("opened")
+}
+
+function removeMenu(){
+    menu.classList.remove("opened")
+}
+
+open.addEventListener("click", toggleMenu)
+close.addEventListener("click", toggleMenu)
+home.addEventListener("click", toggleMenu)
+about.addEventListener("click", toggleMenu)
+project.addEventListener("click", toggleMenu)
+contact.addEventListener("click", toggleMenu)

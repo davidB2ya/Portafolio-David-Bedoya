@@ -27,11 +27,14 @@
                 href="https://api.whatsapp.com/send?phone=573102823965"><img src="https://i.ibb.co/bKtW7wg/Vector-1.png"
                     alt="WhatsApp.ico" /></a>
         </div>
-        <ul>
-            <li><a href="#" class="btns active">Inicio</a></li>
-            <li><a href="#section-about" class="btns">SobreMi</a></li>
-            <li><a href="#section-projects" class="btns">Proyectos</a></li>
-            <li><a href="#section-contacts" class="btns">Contacto</a></li>
+        <button class="open"><i class="fas fa-bars"></i></button>      
+        
+        <ul class="menu">
+            <button class="close"><i class="fas fa-times"></i></button>
+            <li><a href="#" class="btns active" id="btns_home">Inicio</a></li>
+            <li><a href="#section-about" class="btns" id="btns_about">Sobre Mi</a></li>
+            <li><a href="#section-projects" class="btns" id="btns_project">Proyectos</a></li>
+            <li><a href="#section-contacts" class="btns" id="btns_contact">Contacto</a></li>
         </ul>
     </header>
     <section>
@@ -61,10 +64,9 @@
                     <a href="./assets/Hoja de Vida David Bedoya Hernández.pdf" download class="ov-btn-grow-ellipse">Leer
                         más</a>
                 </div>
-                <h3>Habilidades</h3>
-                <h3>Herramientas</h3>
                 <div class="container-skills">
                     <div class="skills">
+                        <h3>Habilidades</h3>
                         <i class="fab fa-html5"></i>
                         <i class="fab fa-css3-alt"></i>
                         <i class="fab fa-js-square"></i>
@@ -79,6 +81,7 @@
                         <!-- <i class="fab fa-laravel"></i> -->
                     </div>
                     <div class="tools">
+                        <h3>Herramientas</h3>
                         <i class="fab fa-git-alt"></i>
                         <i class="fab fa-github"></i>
                         <i class="fab fa-gitlab"></i>
