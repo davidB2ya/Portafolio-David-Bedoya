@@ -19,7 +19,6 @@ html {
     margin-left        : -2em;
     cursor             : pointer;
     transition         : all 500ms;
-    /* background-color: #094b65; */
 }
 
 .logo .img-logo:hover {
@@ -32,7 +31,6 @@ html {
     transition         : all 600ms;
     padding            : 0px 5px 0px 5px;
     cursor             : pointer;
-    /* background-color: #24a75f; */
 }
 
 #linkedin {
@@ -224,6 +222,7 @@ section #text span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing         : 1px;
+    text-transform         : capitalize;
 }
 
 .sec h3 {
@@ -247,7 +246,6 @@ section #text span {
 .sec p {
     font-size  : 1em;
     color      : #fff;
-    /* width   : 50em; */
     text-align : start;
     align-items: center;
 }
@@ -349,7 +347,6 @@ section #text span {
 .tools i {
     font-size : 2.4em;
     padding   : .1em .5em .1em .5em;
-    /* border : 1px solid red; */
     margin-top: 1em;
     transition: all .5s;
 }
@@ -392,9 +389,50 @@ section #text span {
 
 .sec img {
     width        : 12em;
-    height       : 12.5em;
+    height       : 15em;
     margin-bottom: 1em;
     border-radius: 10em;
+}
+ 
+.ov-btn-grow-ellipse {
+    background     : #fff;
+    color          : #045081;
+    border         : 2px solid rgba(34, 179, 184, 1);
+    padding        : 8px 30px;
+    border-radius  : 40px;
+    position       : relative;
+    z-index        : 1;
+    overflow       : hidden;
+    display        : inline-block;
+    text-decoration: none;
+    box-shadow     : 0px 10px 20px rgba(34, 179, 184, 0.5);
+    margin         : 2em 0 0 2em;
+}
+
+.ov-btn-grow-ellipse:hover {
+    color: #fff;
+}
+
+.ov-btn-grow-ellipse::after {
+    content      : "";
+    background   : #41B9C2;
+    box-shadow   : 0px 15px 20px rgba(34, 179, 184, 0.4);
+    position     : absolute;
+    z-index      : -1;
+    padding      : 16px 20px;
+    display      : block;
+    border-radius: 50%;
+    left         : -50%;
+    right        : -50%;
+    top          : -150%;
+    bottom       : -150%;
+    transform    : scale(0, 0);
+    transition   : all 0.4s ease;
+}
+
+.ov-btn-grow-ellipse:hover::after {
+    transition: all 0.6s ease-out;
+    transform : scale(1, 1);
 }
 
 .sec::before {
@@ -410,12 +448,12 @@ section #text span {
 
 /* Section  the Projects*/
 .sec-projects {
-    height    : 100%;
-    position  : relative;
-    padding   : 1em;
+    height        : 100%;
+    position      : relative;
+    padding       : 1em;
     padding-bottom: 5em;
-    background: #053244;
-    text-align: center;
+    background    : #053244;
+    text-align    : center;
 }
 
 .sec-projects h2 {
@@ -459,97 +497,94 @@ section #text span {
     border-radius: 10px 10px 5px 5px;
     height       : 12.7em;
     position     : relative;
-    transition:all .5s ease;
+    transition   : all .5s ease;
 }
 
-.project:hover{
-    transform:scale(1.1);
+.project:hover {
+    transform: scale(1.1);
 }
 
 .project .name {
-    padding                : 0.5em;
-    font-family            : 'Rancho', cursive;
-    font-size              : 2vw;
-    text-align             : center;
-    line-height            : 0.55em;
-    /* background-image       : linear-gradient(0deg, #072e3fbb 40%, #41B9C2 60%); */
-    background-image       : linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
-    display                : block;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing         : 1px;
+    padding                   : 0.5em;
+    font-family               : 'Rancho', cursive;
+    font-size                 : 2vw;
+    text-align                : center;
+    line-height               : 0.55em;
+    background-image          : linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
+    display                   : block;
+    -webkit-background-clip   : text;
+    -webkit-text-fill-color   : transparent;
+    letter-spacing            : 1px;
 }
 
 .img-container img {
-    position: relative;
-    width     : 25vw;
-    height    : 26vh;
-    border-radius : 0 0 3px 3px; 
-    object-fit: cover;
+    position     : relative;
+    width        : 25vw;
+    height       : 9.9em;
+    border-radius: 0 0 3px 3px;
+    object-fit   : cover;
 
 }
 
 .overlay {
-    display:flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
-    position  : absolute;
-    bottom    : 0;
-    left      : 0;
-    background: rgba(0, 118, 192, 0.781);
-    width     : 100%;
-    height    : 0;
-    overflow  : hidden;
-    transition: .5s ease;
+    position       : absolute;
+    bottom         : 0;
+    left           : 0;
+    background     : rgba(0, 118, 192, 0.781);
+    width          : 100%;
+    height         : 0;
+    overflow       : hidden;
+    transition     : .5s ease;
 }
 
 .project .overlay p {
-    color      : #fff;
-    width         : 25vw;
-    font-weight: 300;
-    font-size  : 1em;
-    letter-spacing: .1em;
-    position   : absolute;
-    top        : 30%;
-    left       : 50%;
-    text-align : start;
-    transform  : translate(-50%, -50%);
+    color     : #fff;
+    width     : 25vw;
+    font-size : 1em;
+    position  : absolute;
+    top       : 30%;
+    left      : 50%;
+    text-align: start;
+    transform : translate(-50%, -50%);
 }
 
-.project :hover .overlay{
-    height:81%;
+.project :hover .overlay {
+    height: 81%;
     cursor: pointer;
 }
 
-.overlay .info{
-    display: flex;
+.overlay .info {
+    display        : flex;
     justify-content: space-around;
 }
 
 .fa-github-alt {
-    position   : absolute;
-    margin-top : .8em;
-    font-size  : 2em;
-    color      : #fff;
-    cursor     : pointer;
-    opacity    : 0;
+    position  : absolute;
+    margin-top: .8em;
+    font-size : 2em;
+    color     : #fff;
+    cursor    : pointer;
+    opacity   : 0;
 }
 
-.project :hover .fa-github-alt{
-    opacity : 1;
+.project :hover .fa-github-alt {
+    opacity: 1;
 }
 
 .fa-globe-americas {
-    position    : absolute;
-    margin-top  : .8em;
-    font-size   : 2em;
-    color       : #fff;
-    cursor      : pointer;
-    opacity     : 0;
+    position  : absolute;
+    margin-top: .8em;
+    font-size : 2em;
+    color     : #fff;
+    cursor    : pointer;
+    opacity   : 0;
 }
 
-.project :hover .fa-globe-americas{
-    opacity : 1;
+.project :hover .fa-globe-americas {
+    opacity: 1;
 }
 
 /* Section  the Contacts */
@@ -573,7 +608,7 @@ section #text span {
     display                : block;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing         : 1px;
+    letter-spacing         : 4px;
 }
 
 .sec-contacts p {

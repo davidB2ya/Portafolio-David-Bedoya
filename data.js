@@ -56,7 +56,7 @@ const data =  [
     {
         "id": 7,
         "name": "Chat Intopcol",
-        "description": "Un chat empresial dedicada a la topografia",
+        "description": "Un chat empresial dedicado a la topografia",
         "img": "https://i.ibb.co/mT93h6G/Chat-Intop-Col.jpg",
         "deploy": "",
         "github": "https://github.com/davidB2ya/Chat-Intopcol",
