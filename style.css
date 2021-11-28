@@ -785,6 +785,13 @@ footer {
     cursor     : pointer;
 }
 
+.torre{
+    width : 2.3em;
+    cursor: pointer; 
+    margin-left: 1.5em;
+    margin-bottom: -0.4em;
+}
+
 footer span {
     color: #fff;
 }
