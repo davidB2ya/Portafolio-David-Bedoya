@@ -108,6 +108,9 @@ body {
     color          : #094b65;
     border-radius  : 20px;
     cursor         : pointer;
+    font-size      : 1.1em;
+    font-weight    : 800;
+    letter-spacing : 1px;
 }
 
 #header ul li a:hover,
@@ -117,19 +120,46 @@ body {
 }
 
 #dark-mode {
-    width :3em;
-    height:3em;
-    margin-left:2em;
-    cursor: pointer;
+    width      : 3em;
+    height     : 3em;
+    margin-left: 2em;
+    cursor     : pointer;
 }
 
-#bird1{
+.languages {
+    color        : #094b65;
+    border-radius: 20px;
+    cursor       : pointer;
+    margin-left  : 2em;
+    border       : none;
+    background   : transparent;
+}
+
+.languages a {
+    text-decoration: none;
+    padding        : 0.5em 1.5em 0.5em;
+    font-size      : 1.2em;
+    font-weight    : 900;
+    letter-spacing : 1px;
+    color          : #094b65;
+    border-radius  : 20px;
+    cursor         : pointer;
+}
+
+.languages a:hover {
+    background: #045081;
+    color     : #fff;
+}
+
+#bird1 {
     filter: drop-shadow(-5px 5px 5.5px #383838)
 }
-#bird2{
+
+#bird2 {
     filter: drop-shadow(5px 5px 5.5px #383838)
 }
-#forest{
+
+#forest {
     filter: drop-shadow(5px 5px 5.5px #383838)
 }
 
@@ -744,14 +774,18 @@ section #text span {
     width          : 16em;
 }
 
-.contact i {
+.contact div i {
     margin-bottom: 2.5em;
+    color        : #fff;
+    margin-right : 1em;
 }
 
+.contact div a,
 .contact a {
-    color      : #fff;
-    font-family: 'Rancho', cursive;
-    cursor     : pointer;
+    color          : #fff;
+    font-family    : 'Rancho', cursive;
+    cursor         : pointer;
+    text-decoration: none;
 }
 
 /* Button Float */
@@ -802,10 +836,10 @@ footer {
     cursor     : pointer;
 }
 
-.torre{
-    width : 2.3em;
-    cursor: pointer; 
-    margin-left: 1.5em;
+.torre {
+    width        : 2.3em;
+    cursor       : pointer;
+    margin-left  : 1.5em;
     margin-bottom: -0.4em;
 }
 

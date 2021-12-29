@@ -43,29 +43,37 @@ window.addEventListener('scroll', function () {
 
 window.onload = init
 
-function init() {
+function init () {
   var Xmas95 = new Date()
   var hours = Xmas95.getHours()
 
-  if(hours >= 20){
-    darkMode.src = "https://i.ibb.co/BKtHGmZ/Planning-25-Morning.png"
-    body.style.background = "rgb("+ 30 + "," + 30 + "," + 30 +")"
-  }else{
-    darkMode.src = "https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png"
+  // var ln = navigator.language || navigator.userLanguage;
+  // console.log(ln)
+  // if(ln === 'es-US') {
+  //   data = dataEs
+  // }else{
+  //   data = dataEn
+  // }
+
+  if (hours >= 20 && hours <= 6) {
+    darkMode.src = 'https://i.ibb.co/BKtHGmZ/Planning-25-Morning.png'
+    body.style.background = 'rgb(' + 30 + ',' + 30 + ',' + 30 + ')'
+  } else {
+    darkMode.src = 'https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png'
     body.style.background = '#fff'
   }
+
   console.log(hours)
 }
 
 const funcDarkMode = () => {
-  if (darkMode.src === "https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png"){
-    darkMode.src = "https://i.ibb.co/BKtHGmZ/Planning-25-Morning.png"
-    body.style.background = "rgb("+ 30 + "," + 30 + "," + 30 +")"
-  }else{
-    darkMode.src = "https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png"
+  if (darkMode.src === 'https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png') {
+    darkMode.src = 'https://i.ibb.co/BKtHGmZ/Planning-25-Morning.png'
+    body.style.background = 'rgb(' + 30 + ',' + 30 + ',' + 30 + ')'
+  } else {
+    darkMode.src = 'https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png'
     body.style.background = '#fff'
   }
-  
 }
 
 darkMode.addEventListener('click', funcDarkMode)
@@ -147,4 +155,3 @@ home.addEventListener('click', toggleMenu)
 about.addEventListener('click', toggleMenu)
 project.addEventListener('click', toggleMenu)
 contact.addEventListener('click', toggleMenu)
-
