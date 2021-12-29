@@ -6,6 +6,8 @@ let rocks = document.getElementById('rocks')
 let forest = document.getElementById('forest')
 let water = document.getElementById('water')
 let header = document.getElementById('header')
+let darkMode = document.getElementById('dark-mode')
+let body = document.getElementById('body')
 
 const menu = document.querySelector('.menu')
 const open = document.querySelector('.open')
@@ -38,6 +40,35 @@ window.addEventListener('scroll', function () {
   forest.style.top = value * 0.25 + 'px'
   header.style.top = value * 0.5 + 'px'
 })
+
+window.onload = init
+
+function init() {
+  var Xmas95 = new Date()
+  var hours = Xmas95.getHours()
+
+  if(hours >= 20){
+    darkMode.src = "https://i.ibb.co/BKtHGmZ/Planning-25-Morning.png"
+    body.style.background = "rgb("+ 30 + "," + 30 + "," + 30 +")"
+  }else{
+    darkMode.src = "https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png"
+    body.style.background = '#fff'
+  }
+  console.log(hours)
+}
+
+const funcDarkMode = () => {
+  if (darkMode.src === "https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png"){
+    darkMode.src = "https://i.ibb.co/BKtHGmZ/Planning-25-Morning.png"
+    body.style.background = "rgb("+ 30 + "," + 30 + "," + 30 +")"
+  }else{
+    darkMode.src = "https://i.ibb.co/1bB41tH/Planning-24-Night-Time.png"
+    body.style.background = '#fff'
+  }
+  
+}
+
+darkMode.addEventListener('click', funcDarkMode)
 
 addEventListener('DOMContentLoaded', () => {
   const btn_top = document.querySelector('#btn_top')
@@ -91,7 +122,6 @@ function addProject () {
                         <a target='_blank' class="deploy-project" href="${data[i].deploy}"><i class="fas fa-globe-americas"></i></a> 
                     </div>    
                 </div>
-               
             </div>
             `
       projectEl.innerHTML = projectInnerHTML

@@ -116,6 +116,23 @@ body {
     color     : #fff;
 }
 
+#dark-mode {
+    width :3em;
+    height:3em;
+    margin-left:2em;
+    cursor: pointer;
+}
+
+#bird1{
+    filter: drop-shadow(-5px 5px 5.5px #383838)
+}
+#bird2{
+    filter: drop-shadow(5px 5px 5.5px #383838)
+}
+#forest{
+    filter: drop-shadow(5px 5px 5.5px #383838)
+}
+
 .open,
 .close {
     display: none;
