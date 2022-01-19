@@ -79,6 +79,24 @@ const data =  [
         "deploy": "./siteConstructionEn.html",
         "github": "",
         "stacks": ["HTML5","CSS","JavaScript"]
+    },
+    {
+        "id": 10,
+        "name": "Game Club ",
+        "description": "Website in which I use the RAWG API and tools like TailwindCSS.",
+        "img": "https://i.ibb.co/D472FwC/Game-Club-B2yas.jpg",
+        "deploy": "https://enigmatic-crag-17140.herokuapp.com",
+        "github": "https://github.com/davidB2ya/Video-Juegos-Club.git",
+        "stacks": ["HTML5","CSS","JavaScript","React","API-Rest","Node.js","Express.js","Mongo DB","TailwindCSS"]
+    },
+    {
+        "id": 11,
+        "name": "Mentoring App 'Okhlos'",
+        "description": "Application that is part of the ecosystem created by Prográmte for the development of BootCamp",
+        "img": "https://i.ibb.co/bm5bfKX/Okhlos.jpg",
+        "deploy": "https://fathomless-bastion-33135.herokuapp.com/",
+        "github": "https://github.com/davidB2ya/MentoringApp.git",
+        "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB"]
     }
 ]
 
