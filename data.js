@@ -22,7 +22,7 @@ const data =  [
         "name": "Proyectos de JavaScript",
         "description": "Proyecto donde muestro una galeria de retos de JavaScript",
         "img": "https://i.ibb.co/R255VBm/Retos-JS.jpg",
-        "deploy": "https://retos-js.vercel.app/",
+        "deploy": "https://retos-js-seven.vercel.app/",
         "github": "https://github.com/davidB2ya/retos-js",
         "stacks": ["HTML5", "CSS", "JavaScript", "React"]
     },
