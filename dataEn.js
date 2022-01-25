@@ -49,8 +49,8 @@ const data =  [
         "name": "Chat Intopcol",
         "description": "A business chat dedicated to surveying",
         "img": "https://i.ibb.co/mT93h6G/Chat-Intop-Col.jpg",
-        "deploy": "./siteConstructionEn.html",
-        "github": "https://github.com/davidB2ya/Chat-Intopcol",
+        "deploy": "https://mysterious-peak-94476.herokuapp.com/",
+        "github": "https://github.com/davidB2ya/Chat-Intopcol/tree/main",
         "stacks": ["HTML5", "CSS", "JavaScript", "React", "Node.js","Express.js"]
     },
     {
