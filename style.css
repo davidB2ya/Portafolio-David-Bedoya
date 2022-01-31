@@ -855,7 +855,11 @@ footer span {
 /*----------------------------- Media Query --------------------------*/
 
 /* Small (sm) */
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+    body{
+        font-size: 13px;
+    }
+}
 
 /* Medium (md) */
 @media (max-width: 768px) {
