@@ -97,6 +97,24 @@ const data =  [
         "deploy": "https://fathomless-bastion-33135.herokuapp.com/",
         "github": "https://github.com/davidB2ya/MentoringApp.git",
         "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB"]
+    },
+    {
+        "id": 12,
+        "name": "Coin Exchanges",
+        "description": "Application to quote the value in real time of the 100 most important cryptocurrencies",
+        "img": "https://i.ibb.co/fqsR0Vz/Coin-Exchanges-B2ya-1.jpg",
+        "deploy": "http://coin-exchanges-b2ya.herokuapp.com",
+        "github": "https://github.com/davidB2ya/Coin-Exchanges",
+        "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB","Sass"]
+    },
+    {
+        "id": 13,
+        "name": "El Horno",
+        "description": "Site to order pizzas both personalized and from the menu",
+        "img": "https://i.ibb.co/vqZ4cpW/El-Horno.jpg",
+        "deploy": "https://el-horno.vercel.app",
+        "github": "https://github.com/davidB2ya/El-Horno",
+        "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB"]
     }
 ]
 

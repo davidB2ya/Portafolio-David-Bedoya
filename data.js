@@ -94,8 +94,26 @@ const data =  [
         "name": "Mentoring App 'Okhlos'",
         "description": "Aplicación que forma parte del ecosistema creado por Prográmte para el desarrollo del BootCamp ",
         "img": "https://i.ibb.co/bm5bfKX/Okhlos.jpg",
-        "deploy": "https://fathomless-bastion-33135.herokuapp.com/",
+        "deploy": "https://fathomless-bastion-33135.herokuapp.com",
         "github": "https://github.com/davidB2ya/MentoringApp.git",
+        "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB"]
+    },
+    {
+        "id": 12,
+        "name": "Coin Exchanges",
+        "description": "Aplicación para cotizar el valor en tiempo real de las 100 criptomonedas más importantes ",
+        "img": "https://i.ibb.co/fqsR0Vz/Coin-Exchanges-B2ya-1.jpg",
+        "deploy": "http://coin-exchanges-b2ya.herokuapp.com",
+        "github": "https://github.com/davidB2ya/Coin-Exchanges",
+        "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB","Sass"]
+    },
+    {
+        "id": 13,
+        "name": "El Horno",
+        "description": "Sitio para pedir pizzas tanto personalizadas como del menu",
+        "img": "https://i.ibb.co/vqZ4cpW/El-Horno.jpg",
+        "deploy": "https://el-horno.vercel.app",
+        "github": "https://github.com/davidB2ya/El-Horno",
         "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB"]
     }
 ]
