@@ -16,6 +16,11 @@ const home = document.getElementById('btns_home')
 const about = document.getElementById('btns_about')
 const project = document.getElementById('btns_project')
 const contact = document.getElementById('btns_contact')
+const btnContact = document.getElementById('button');
+const nombre = document.getElementById('nombre');
+const correo = document.getElementById('correo');
+const tel = document.getElementById('tel');
+const msm = document.getElementById('msm');
 
 const skills = document.querySelector('.skills')
 const tools = document.querySelector('.tools')
@@ -140,6 +145,28 @@ function toggleMenu() {
 function removeMenu() {
     menu.classList.remove('opened')
 }
+
+document.getElementById('form')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btnContact.value = 'Sending...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_hv5tvwj';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btnContact.value = 'Send';
+                nombre.value = "";
+                correo.value = "";
+                tel.value = "";
+                msm.value = "";
+            }, (err) => {
+                btnContact.value = 'Send';
+                alert(JSON.stringify(err));
+            });
+    });
 
 open.addEventListener('click', toggleMenu)
 close.addEventListener('click', toggleMenu)

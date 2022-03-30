@@ -15,17 +15,43 @@
         <h1>Hola querido visitante</h1>
         <h2>Te agradezco el interes por este sitio, pero en estos momentos esta en Construcción o Mantenimiento</h2>
         <span>Si desea que te contacte cuando el sitio este activo enviame un mensaje</span>
-        <form action="https://formsubmit.co/dbedoya0408@gmail.com" method="POST">
+        <form id="form">
             <input id="nombre" type="name" name="name" placeholder="Nombre..." required>
             <input id="correo" type="email" name="email" placeholder="Correo..." required>
             <input id="tel" type="phone" name="phone" placeholder="Teléfono...">
             <textarea id="msm" type="text" name="message" placeholder="Mensaje ..." required></textarea>
-            <input type="hidden" name="_ subject" value="¡Nuevo envío de Portafolio!">
-            <input type="hidden" name="_ captcha" value="false">
-            <button id="enviar" type="submit">Enviar</button>
+            <input value="Enviar" id="button" type="submit"/>
         </form>
         <img src="./assets/pngwing.com.png" alt="website under Construction" />
     </div>
 </body>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    emailjs.init('m3tsd3_nUUwvK2_Fo')
+</script>
+
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_hv5tvwj';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Enviar';
+                }, (err) => {
+                    btn.value = 'Enviar';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
 
 </html>

@@ -125,14 +125,12 @@
                         </div>
                     </div>
 
-                    <form action="https://formsubmit.co/dbedoya0408@gmail.com" method="POST">
+                    <form id="form">
                         <input id="nombre" type="name" name="name" placeholder="Nombre..." required>
                         <input id="correo" type="email" name="email" placeholder="Correo..." required>
                         <input id="tel" type="phone" name="phone" placeholder="Teléfono...">
                         <textarea id="msm" type="text" name="message" placeholder="Mensaje ..." required></textarea>
-                        <input type="hidden" name="_ subject" value="¡Nuevo envío de Portafolio!">
-                        <input type="hidden" name="_ captcha" value="false">
-                        <button id="enviar" type="submit">Enviar</button>
+                        <input value="Enviar" id="button" type="submit"/>
                     </form>
 
                 </div>
@@ -163,6 +161,43 @@
             <script src="app.js" type="module"></script>
             <script src="https://kit.fontawesome.com/20f2b8313a.js" crossorigin="anonymous"></script>
             <script src="//code.tidio.co/s4qvo2ka1tfikqvbcvcq00k7rjh5cnex.js" async></script>
+
+            
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    emailjs.init('m3tsd3_nUUwvK2_Fo')
+</script>
+<!-- 
+<script>
+    const btn = document.getElementById('button');
+    const nombre = document.getElementById('nombre');
+    const correo = document.getElementById('correo');
+    const tel = document.getElementById('tel');
+    const msm = document.getElementById('msm');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_hv5tvwj';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Enviar';
+                    nombre.value = "";
+                    correo.value = "";
+                    tel.value = "";
+                    msm.value = "";
+                }, (err) => {
+                    btn.value = 'Enviar';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script> -->
 </body>
 
 </html>
