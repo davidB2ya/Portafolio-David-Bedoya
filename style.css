@@ -108,12 +108,59 @@ body {
     color          : #094b65;
     border-radius  : 20px;
     cursor         : pointer;
+    font-size      : 1.1em;
+    font-weight    : 800;
+    letter-spacing : 1px;
 }
 
 #header ul li a:hover,
 #header ul li a.active {
     background: #045081;
     color     : #fff;
+}
+
+#dark-mode {
+    width      : 3em;
+    height     : 3em;
+    margin-left: 2em;
+    cursor     : pointer;
+}
+
+.languages {
+    color        : #094b65;
+    border-radius: 20px;
+    cursor       : pointer;
+    margin-left  : 2em;
+    border       : none;
+    background   : transparent;
+}
+
+.languages a {
+    text-decoration: none;
+    padding        : 0.5em 1.5em 0.5em;
+    font-size      : 1.2em;
+    font-weight    : 900;
+    letter-spacing : 1px;
+    color          : #094b65;
+    border-radius  : 20px;
+    cursor         : pointer;
+}
+
+.languages a:hover {
+    background: #045081;
+    color     : #fff;
+}
+
+#bird1 {
+    filter: drop-shadow(-5px 4.5px 3.5px #5e5d5d)
+}
+
+#bird2 {
+    filter: drop-shadow(5px 4.5px 3.5px #5e5d5d)
+}
+
+#forest {
+    filter: drop-shadow(5px 5px 5.5px #383838)
 }
 
 .open,
@@ -676,7 +723,7 @@ section #text span {
     color: #fff;
 }
 
-.sec-contacts form button {
+#button {
     border-radius : .8em;
     border        : 2px solid #41B9C2;
     background    : transparent;
@@ -694,7 +741,7 @@ section #text span {
     outline       : none;
 }
 
-.sec-contacts form button:hover {
+#button:hover {
     background-color: #41B9C2;
     box-shadow      : 0px 15px 20px rgba(34, 179, 184, 0.4);
     color           : #fff;
@@ -727,14 +774,18 @@ section #text span {
     width          : 16em;
 }
 
-.contact i {
+.contact div i {
     margin-bottom: 2.5em;
+    color        : #fff;
+    margin-right : 1em;
 }
 
+.contact div a,
 .contact a {
-    color      : #fff;
-    font-family: 'Rancho', cursive;
-    cursor     : pointer;
+    color          : #fff;
+    font-family    : 'Rancho', cursive;
+    cursor         : pointer;
+    text-decoration: none;
 }
 
 /* Button Float */
@@ -785,10 +836,10 @@ footer {
     cursor     : pointer;
 }
 
-.torre{
-    width : 2.3em;
-    cursor: pointer; 
-    margin-left: 1.5em;
+.torre {
+    width        : 2.3em;
+    cursor       : pointer;
+    margin-left  : 1.5em;
     margin-bottom: -0.4em;
 }
 
@@ -804,7 +855,11 @@ footer span {
 /*----------------------------- Media Query --------------------------*/
 
 /* Small (sm) */
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+    body{
+        font-size: 13px;
+    }
+}
 
 /* Medium (md) */
 @media (max-width: 768px) {

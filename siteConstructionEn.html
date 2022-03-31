@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,15 +12,15 @@
 
 <body>
     <div>
-        <h1>Hola querido visitante</h1>
-        <h2>Te agradezco el interes por este sitio, pero en estos momentos esta en Construcción o Mantenimiento</h2>
-        <span>Si desea que te contacte cuando el sitio este activo enviame un mensaje</span>
+        <h1>Hello dear visitor</h1>
+        <h2>I appreciate your interest in this site, but at the moment it is under Construction or Maintenance</h2>
+        <span>If you want me to contact you when the site is active send me a message</span>
         <form id="form">
-            <input id="nombre" type="name" name="name" placeholder="Nombre..." required>
-            <input id="correo" type="email" name="email" placeholder="Correo..." required>
-            <input id="tel" type="phone" name="phone" placeholder="Teléfono...">
-            <textarea id="msm" type="text" name="message" placeholder="Mensaje ..." required></textarea>
-            <input value="Enviar" id="button" type="submit" />
+            <input id="nombre" type="name" name="name" placeholder="Name..." required>
+            <input id="correo" type="email" name="email" placeholder="Email..." required>
+            <input id="tel" type="phone" name="phone" placeholder="Phone...">
+            <textarea id="msm" type="text" name="message" placeholder="Message ..." required></textarea>
+            <input id="button" value="Send" type="submit" />
         </form>
         <img src="./assets/pngwing.com.png" alt="website under Construction" />
     </div>
@@ -35,20 +35,21 @@
 <script>
     const btn = document.getElementById('button');
 
+
     document.getElementById('form')
         .addEventListener('submit', function (event) {
             event.preventDefault();
 
-            btn.value = 'Enviando...';
+            btn.value = 'Sending...';
 
             const serviceID = 'default_service';
             const templateID = 'template_hv5tvwj';
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
-                    btn.value = 'Enviar';
+                    btn.value = 'Send';
                 }, (err) => {
-                    btn.value = 'Enviar';
+                    btn.value = 'Send';
                     alert(JSON.stringify(err));
                 });
         });
