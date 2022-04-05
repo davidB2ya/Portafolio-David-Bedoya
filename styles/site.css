@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&display=swap');
+
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor     : default;
+}
+
+html {
+    scroll-behavior: smooth;
+    background     : #045081;
+    margin         : 1em;
+    overflow       : hidden;
+}
+
+h1 {
+    padding                : 0.5em;
+    font-family            : 'Rancho', cursive;
+    font-size              : 4vw;
+    text-align             : center;
+    line-height            : 0.55em;
+    background-image       : linear-gradient(0deg, #41B9C2 40%, #C6F7FA 60%);
+    display                : block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing         : 1px;
+    text-transform         : capitalize;
+}
+
+h2 {
+    width     : 50%;
+    display   : block;
+    margin    : auto;
+    color     : #fff;
+    text-align: center;
+}
+
+span {
+    width     : 50%;
+    display   : block;
+    margin    : auto;
+    margin-top: 1em;
+    color     : #fff;
+}
+
+form {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin-top    : 2em;
+}
+
+form input {
+    border-radius : .8em;
+    border        : 2px solid #41B9C2;
+    background    : transparent;
+    margin-bottom : 1.5em;
+    width         : 25em;
+    height        : 2.8em;
+    padding-left  : .4em;
+    color         : #fff;
+    font-weight   : 600;
+    line-height   : 24px;
+    letter-spacing: 1.71429px;
+    box-shadow    : 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+form input::placeholder {
+    color: #fff;
+}
+
+form input:focus {
+    outline         : none;
+    background-color: #042330;
+}
+
+form textarea {
+    border-radius : .8em;
+    border        : 2px solid #41B9C2;
+    background    : transparent;
+    margin-bottom : 1.5em;
+    width         : 25em;
+    height        : 8em;
+    padding-left  : .4em;
+    color         : #fff;
+    font-weight   : 600;
+    line-height   : 24px;
+    letter-spacing: 1.71429px;
+    box-shadow    : 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+form textarea:focus {
+    outline: none;
+}
+
+form textarea::placeholder {
+    color: #fff;
+}
+
+#button {
+    border-radius : .8em;
+    border        : 2px solid #41B9C2;
+    background    : transparent;
+    margin-bottom : 1.5em;
+    width         : 25em;
+    height        : 2.5em;
+    padding-left  : .4em;
+    color         : #fff;
+    font-weight   : 600;
+    line-height   : 24px;
+    letter-spacing: 1.71429px;
+    box-shadow    : 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition    : all 0.3s ease 0s;
+    cursor        : pointer;
+    outline       : none;
+}
+
+#button:hover {
+    background-color: #41B9C2;
+    box-shadow      : 0px 15px 20px rgba(34, 179, 184, 0.4);
+    color           : #fff;
+    transform       : translateY(-7px);
+}
+
+img {
+    width      : 35vw;
+    height     : 70vh;
+    position   : relative;
+    margin-top : -400px;
+    margin-left: -100px;
+
+}

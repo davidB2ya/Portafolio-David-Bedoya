@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Construction</title>
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../styles/site.css">
+</head>
+
+<body>
+    <div>
+        <h1>Hello dear visitor</h1>
+        <h2>I appreciate your interest in this site, but at the moment it is under Construction or Maintenance</h2>
+        <span>If you want me to contact you when the site is active send me a message</span>
+        <form id="form">
+            <input id="nombre" type="name" name="name" placeholder="Name..." required>
+            <input id="correo" type="email" name="email" placeholder="Email..." required>
+            <input id="tel" type="phone" name="phone" placeholder="Phone...">
+            <textarea id="msm" type="text" name="message" placeholder="Message ..." required></textarea>
+            <input id="button" value="Send" type="submit" />
+        </form>
+        <img src="../assets/pngwing.com.png" alt="website under Construction" />
+    </div>
+</body>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    emailjs.init('m3tsd3_nUUwvK2_Fo')
+</script>
+
+<script>
+    const btn = document.getElementById('button');
+
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_hv5tvwj';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send';
+                }, (err) => {
+                    btn.value = 'Send';
+                    alert(JSON.stringify(err));
+                });
+        });
+</script>
+
+</html>
