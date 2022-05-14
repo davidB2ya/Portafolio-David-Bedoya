@@ -115,6 +115,15 @@ const data =  [
         "deploy": "https://el-horno.vercel.app",
         "github": "https://github.com/davidB2ya/El-Horno",
         "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB"]
+    },
+    {
+        "id": 14,
+        "name": "FusePong Planning",
+        "description": "Website to keep track of the progress of different development projects",
+        "img": "https://i.ibb.co/VwRgKwV/Fuse-Pong-Planning.jpg",
+        "deploy": "https://fuse-pong-table.vercel.app/",
+        "github": "https://github.com/davidB2ya/FusePongTable",
+        "stacks": ["HTML5","CSS","JavaScript","React","Node.js","Express.js","Mongo DB", "TailwindCSS", "Axios"]
     }
 ]
 
